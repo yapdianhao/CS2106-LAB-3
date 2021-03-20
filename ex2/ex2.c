@@ -24,13 +24,13 @@ void writer_acquire(rw_lock* lock)
   //TODO: modify as needed
   pthread_mutex_lock(&(lock->mutex));
   lock->writer_count++;
-  pthread_mutex_unlock(&(lock->mutex));
+  //pthread_mutex_unlock(&(lock->mutex));
 }
 
 void writer_release(rw_lock* lock)
 {
   //TODO: modify as needed
-  pthread_mutex_lock(&(lock->mutex));
+  //pthread_mutex_lock(&(lock->mutex));
   lock->writer_count--;
   pthread_mutex_unlock(&(lock->mutex));
 }
@@ -40,13 +40,13 @@ void reader_acquire(rw_lock* lock)
   //TODO: modify as needed
   pthread_mutex_lock(&(lock->mutex));
   lock->reader_count++;
-  pthread_mutex_unlock(&(lock->mutex));
+  //pthread_mutex_unlock(&(lock->mutex));
 }
 
 void reader_release(rw_lock* lock)
 {
   //TODO: modify as needed
-  pthread_mutex_lock(&(lock->mutex));
+  //pthread_mutex_lock(&(lock->mutex));
   lock->reader_count--;
   pthread_mutex_unlock(&(lock->mutex));
 }
