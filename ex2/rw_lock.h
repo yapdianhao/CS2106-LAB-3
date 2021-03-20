@@ -12,10 +12,12 @@ for the 2nd member if  you are on a team
 #define __CS2106_RWLOCKV1_H_
 
 #include <pthread.h> // To import the pthread_mutex_t type.
+#include <stdlib.h>
 
 //TODO: You can modify the structure
 typedef struct {
   pthread_mutex_t mutex;
+  pthread_mutex_t read_mutex;
   int reader_count;
   int writer_count;
 } rw_lock;
