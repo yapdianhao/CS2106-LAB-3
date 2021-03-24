@@ -24,6 +24,8 @@ Copy over the solution and modify as needed.
 //TODO: You can modify the structure
 typedef struct {
   pthread_mutex_t mutex;
+  pthread_mutex_t read_mutex;
+  pthread_mutex_t next_mutex;
   int reader_count;
   int writer_count;
 } rw_lock;

@@ -14,11 +14,17 @@ for the 2nd member if  you are on a team
  * This file contains declarations. You should only modify the barrier_t struct,
  * as the method signatures will be needed to compile with the runner.
  */
+
+#include <semaphore.h>
+
 #ifndef __CS2106_BARRIER_H_
 #define __CS2106_BARRIER_H_
 
 typedef struct barrier {
   int count;
+  int arrived;
+  sem_t *sem;
+  sem_t *mutex;
   //TODO: add additional fields here
 } barrier_t;
 
