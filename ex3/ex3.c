@@ -1,8 +1,8 @@
 /*************************************
 * Lab 3 Exercise 3
-* Name:
-* Student Id: A????????
-* Lab Group: B??
+* Name: Yap Dian Hao
+* Student Id: A0184679H
+* Lab Group: B13
 *************************************
 Note: Duplicate the above and fill in 
 for the 2nd member if  you are on a team
@@ -20,7 +20,6 @@ Copy over the solution and modify as needed.
 
 void initialise(rw_lock* lock)
 {
-  //TODO: modify as needed
   pthread_mutex_init(&(lock->mutex), NULL);
   pthread_mutex_init(&(lock->read_mutex), NULL);
   pthread_mutex_init(&(lock->next_mutex), NULL);
@@ -63,4 +62,6 @@ void reader_release(rw_lock* lock)
 void cleanup(rw_lock* lock)
 {
   pthread_mutex_destroy(&(lock->mutex));
+  pthread_mutex_destroy(&(lock->read_mutex));
+  pthread_mutex_destroy(&(lock->next_mutex));
 }
